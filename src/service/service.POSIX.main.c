@@ -1,18 +1,7 @@
 
 #ifndef _WIN32
 
-    #include <service/service.POSIX.h>
-
-    void *serviceWorkerThread(void *t)
-    {
-
-        while (1)
-        {
-            Sleep(10);
-        }
-        
-
-    } 
+    #include <service/service.POSIX.h> 
 
     void serviceMain(int _argument_count, char *_argument_values[])
     {
@@ -35,7 +24,7 @@
  
         pthread_t worker_thread;
         
-        int result_of_creating_the_worker_thread = pthread_create(&worker_thread, &_attributes_for_worker_thread, serviceWorkerThread, NULL);
+        int result_of_creating_the_worker_thread = pthread_create(&worker_thread, &_attributes_for_worker_thread, posixServiceWorkerThreadRoutine, NULL);
 
         if (result_of_creating_the_worker_thread != 0) goto _LEAVE_SERVICE_DIRECTLY;
 

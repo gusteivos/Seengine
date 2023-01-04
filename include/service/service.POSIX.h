@@ -12,7 +12,7 @@
 
     #define ARGUMENT_START_SERVICE "--run"
 
-    void *serviceWorkerThread(void *);
+    void *posixServiceWorkerThreadRoutine(void *);
 
     int prepareArgumentsForPosixServiceEntry(int, char *[], char *[]);
 

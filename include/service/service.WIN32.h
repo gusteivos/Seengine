@@ -16,7 +16,7 @@
 
     extern HANDLE                   service_stop_event_handler;
 
-    //DWORD WINAPI serviceWorkerThread(LPVOID);
+    DWORD WINAPI win32ServiceWorkerThreadRoutine(LPVOID);
 
     void WINAPI reportServiceStatus(DWORD, DWORD);
 
