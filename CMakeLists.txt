@@ -18,4 +18,8 @@ set(executable_header_files
 
 add_executable(Seengine ${executable_source_files})
 
+TARGET_LINK_LIBRARIES(Seengine
+    pthread
+)
+
 include_directories(${executable_header_files})

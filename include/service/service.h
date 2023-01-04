@@ -22,6 +22,8 @@
 
     #define MINIMUM_SERVICE_NAME_LENGTH 4
 
+    #define STACK_SIZE_FOR_WORKER_THREAD 2048000 /*2,048 MB */
+
     extern int exit_code_for_service_executable;
 
     extern int exit_code_for_service;
@@ -32,4 +34,4 @@
 
     bool startedForService(int, char *[]);
 
-#endif
+#endif /*SERVICE_H_ */

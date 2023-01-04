@@ -15,5 +15,7 @@
     #include <errno.h>
     #include <unistd.h>
     #include <signal.h>
+    #include <pthread.h>
+    #include <sched.h>
 
 #endif
