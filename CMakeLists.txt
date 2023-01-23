@@ -7,19 +7,18 @@ project(Seengine VERSION 0.1.0)
 file(GLOB executable_source_files
     "main.c"
     "src/*.c"
-    "src/service/*.c"
-    "src/service/*.*.c"
 )
 
 set(executable_header_files
     include
-    include/service
 )
 
 add_executable(Seengine ${executable_source_files})
 
-TARGET_LINK_LIBRARIES(Seengine
-    pthread
-)
+if (WIN32)
+
+elseif(UNIX)
+
+endif (UNIX)
 
 include_directories(${executable_header_files})
