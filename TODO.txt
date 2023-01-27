@@ -1,5 +1,1 @@
-For now:
-    Remove "TODO" comments from code
-
-For the future:
-    Support UTF 16 characters on Win32.
+NC.

@@ -7,13 +7,15 @@ project(Seengine VERSION 0.1.0)
 file(GLOB executable_source_files
     "main.c"
     "src/*.c"
+    "src/seengine/*.c"
+    "src/seengine/*/*.c"
 )
 
 set(executable_header_files
-    include
+    include/
 )
 
-add_executable(Seengine ${executable_source_files})
+add_executable(${CMAKE_PROJECT_NAME} ${executable_source_files})
 
 if (WIN32)
 
