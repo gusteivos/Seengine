@@ -11,9 +11,9 @@
 
         #include <tchar.h>
 
-        #define SE_Text(text) _T(text)
+        #define _SE_T(text) _T(text)
 
-        #define SE_strcasecmp(stra, strb) _tcsicmp(stra, strb)
+        #define _SE_strcasecmp(stra, strb) _tcsicmp(stra, strb)
 
         typedef TCHAR se_char_t;
 
@@ -21,9 +21,9 @@
 
         #include <string.h>
 
-        #define SE_Text(text) text
+        #define _SE_T(text) text
 
-        #define SE_strcasecmp(stra, strb) strcasecmp (stra, strb)
+        #define _SE_strcasecmp(stra, strb) strcasecmp (stra, strb)
 
         typedef char se_char_t;
 

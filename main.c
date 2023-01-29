@@ -1,4 +1,12 @@
-#include <seengine/engine.h>
+#ifdef _WIN32
+
+    #include <seengine/engine.WIN32.h>
+
+#else /*POSIX */
+
+    #include <seengine/engine.POSIX.h>
+
+#endif
 #include <stdio.h>
 
 int semain(int32_t argument_count, SECHAR *argument_values[])
@@ -12,8 +20,8 @@ int semain(int32_t argument_count, SECHAR *argument_values[])
 
 int main(int argument_count, SECHAR *argument_values[])
 {
-
-    if (!SE_StartedForService(SE_StartedForService, argument_values))
+    
+    if (!SE_StartedForService(argument_count, argument_values))
     {
 
         

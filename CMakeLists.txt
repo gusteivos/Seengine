@@ -8,6 +8,8 @@ file(GLOB executable_source_files
     "main.c"
     "src/*.c"
     "src/seengine/*.c"
+    "src/seengine/*.*.c"
+    "src/seengine/*.*.*.c"
     "src/seengine/*/*.c"
 )
 
@@ -21,6 +23,6 @@ if (WIN32)
 
 elseif(UNIX)
 
-endif (UNIX)
+endif ()
 
 include_directories(${executable_header_files})
