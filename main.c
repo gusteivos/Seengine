@@ -1,15 +1,7 @@
-#ifdef _WIN32
-
-    #include <seengine/engine.WIN32.h>
-
-#else /*POSIX */
-
-    #include <seengine/engine.POSIX.h>
-
-#endif
+#include <seengine/see.h>
 #include <stdio.h>
 
-int semain(int32_t argument_count, SECHAR *argument_values[])
+int seemain(int32_t argument_count, SEECHAR *argument_values[])
 {
 
     
@@ -18,13 +10,13 @@ int semain(int32_t argument_count, SECHAR *argument_values[])
 
 }
 
-int main(int argument_count, SECHAR *argument_values[])
+int main(int32_t argument_count, SEECHAR *argument_values[])
 {
-    
-    if (!SE_StartedForService(argument_count, argument_values))
+
+    if (!SEE_StartedForService(argument_count, argument_values))
     {
 
-        
+        printf("qwertyuiop");
 
     }
 

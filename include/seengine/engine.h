@@ -4,20 +4,23 @@
 
 */
 
-#ifndef S_ENGINE_H_
-#define S_ENGINE_H_
+#ifndef SE_ENGINE_H_
+#define SE_ENGINE_H_
 
-    #include "types/sechar.h"
-    #include "sedefines.h"
+    #include "types/seechar.h"
+    #include "seedefines.h"
     #include <stdint.h>
     #include <stdbool.h>
+    #include <stdlib.h>
 
-    extern SECHAR *SE_service_name;
+    extern SEECHAR *SEE_service_name;
 
-    int semain(int32_t, SECHAR *[]);
+    int seemain(int32_t, SEECHAR *[]);
 
-    void SE_LoadServiceName(void);
+    void SEE_LoadServiceName(void);
 
-    bool SE_StartedForService(int32_t, SECHAR *[]);
+    bool SEE_StartedForService(int32_t, SEECHAR *[]);
+
+    bool SEE_StartService     (int32_t, SEECHAR *[]);
 
 #endif
