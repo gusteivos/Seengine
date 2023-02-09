@@ -1,12 +1,4 @@
-#ifdef _WIN32
-
-    #include <seengine/engine.WIN32.h>
-
-#else /*POSIX */
-
-    #include <seengine/engine.POSIX.h>
-
-#endif
+#include <seengine/see.h>
 
   #include <stdio.h> /*debug*/
 
@@ -16,6 +8,23 @@ void SEE_LoadServiceName()
 {
 
 
+
+}
+
+bool SEE_StartService     (int32_t argument_count, SEECHAR *argument_values[])
+{
+
+    #ifdef _WIN32
+
+        SEE_LoadServiceName();
+
+        
+
+    #else /*POSIX */
+
+        SEE_POSIXServiceEntry(argument_count, argument_values);
+
+    #endif
 
 }
 
@@ -56,16 +65,10 @@ bool SEE_StartedForService(int32_t argument_count, SEECHAR *argument_values[])
 
                 }
 
-            for (int q = 0; q < ___argument_count_to_start; q++)
-                    printf("%s", ___argument_values_to_start[q]);
+                for (int q = 0; q < ___argument_count_to_start; q++) /*debug*/
+                        printf("%s", ___argument_values_to_start[q]);
 
-            #ifdef _WIN32
-
-            #else
-
-                SEE_POSIXServiceEntry(___argument_count_to_start, ___argument_values_to_start);
-
-            #endif
+           SEE_StartService(___argument_count_to_start, ___argument_values_to_start);
 
         }
 

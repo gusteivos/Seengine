@@ -1,22 +1,26 @@
 /*
 
-    //TODO: 
+    TODO: 
 
 */
 
-#ifndef SE_ENGINE_POSIX_H_
-#define SE_ENGINE_POSIX_H_
+#ifndef _WIN32
 
-    #include "engine.h"
+    #ifndef SE_ENGINE_POSIX_H_
+    #define SE_ENGINE_POSIX_H_
 
-    #include <errno.h>
-    #include <unistd.h>
-    #include <signal.h>
-    #include <pthread.h>
-    #include <sched.h>
+        #include "engine.h"
 
-    uint8_t SEE_POSIXServiceEntry(int32_t, SEECHAR *[]);
+        #include <errno.h>
+        #include <unistd.h>
+        #include <signal.h>
+        #include <pthread.h>
+        #include <sched.h>
 
-    void    SEE_POSIXServiceMain (int32_t, SEECHAR *[]);
+        uint8_t SEE_POSIXServiceEntry(int32_t, SEECHAR *[]);
+
+        void    SEE_POSIXServiceMain (int32_t, SEECHAR *[]);
+
+    #endif
 
 #endif

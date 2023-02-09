@@ -19,8 +19,8 @@
 
     void SEE_LoadServiceName(void);
 
-    bool SEE_StartedForService(int32_t, SEECHAR *[]);
-
     bool SEE_StartService     (int32_t, SEECHAR *[]);
+
+    bool SEE_StartedForService(int32_t, SEECHAR *[]);
 
 #endif
